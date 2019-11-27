@@ -15,4 +15,15 @@ class Post extends Model
     {
         return $this->morphMany('App\Like', 'likeable');
     }
+
+    /**
+     * Display the relationship data in custom column(postLiked).
+     *
+     * @param \App\Post
+     * @return string
+    */
+    public static function laratablesCustomPostLiked($post)
+    {
+        return $post->likes->implode('name', ',');
+    }
 }

@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'OneToManyPolyController@index');
+Route::get('display', 'OneToManyPolyController@oneToManyPolyData')->name('oneToManyPoly');
