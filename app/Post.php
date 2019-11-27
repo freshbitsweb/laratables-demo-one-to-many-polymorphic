@@ -26,4 +26,15 @@ class Post extends Model
     {
         return $post->likes->implode('name', ',');
     }
+
+    /**
+     * Display image from url in table
+     *
+     * @param \App\Post
+     * @return string
+    */
+    public static function laratablesUrl($post)
+    {
+        return "<img src='$post->url' width='700px' height=100px>";
+    }
 }

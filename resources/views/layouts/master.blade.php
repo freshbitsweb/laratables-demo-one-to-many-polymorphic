@@ -22,7 +22,7 @@
                 ajax: "{{ route('oneToManyPoly') }}",
                 columns: [
                     { name: 'title' },
-                    { name: 'url' },
+                    { name: 'url', searchable: false },
                     { name: 'postLiked', orderable: false },
                 ],
             });
