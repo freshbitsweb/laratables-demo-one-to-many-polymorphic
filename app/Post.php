@@ -37,4 +37,18 @@ class Post extends Model
     {
         return "<img src='$post->url' width='700px' height=100px>";
     }
+
+    /**
+     * searching the postLiked column data.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder
+     * @param string search term
+     * @return \Illuminate\Database\Eloquent\Builder
+    */
+    public static function laratablesSearchPostLiked($query, $searchValue)
+    {
+        return $query->orWhereHas('likes', function($query) use($searchValue) {
+            $query->where('name', 'like', "%" .$searchValue. "%");
+        });
+    }
 }
