@@ -40,7 +40,7 @@ class Post extends Model
     */
     public static function laratablesUrl($post)
     {
-        return "<img src='$post->url' width='700px' height=100px>";
+        return "<img src='$post->url'>";
     }
 
     /**
