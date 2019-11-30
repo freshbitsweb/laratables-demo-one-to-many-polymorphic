@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'OneToManyPolyController@index');
-Route::get('display', 'OneToManyPolyController@oneToManyPolyData')->name('oneToManyPoly');
+Route::get('display', 'OneToManyPolyController@oneToManyPolyData')->name('one_to_many_poly');

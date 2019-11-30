@@ -15,7 +15,7 @@ class OneToManyPolyController extends Controller
     **/
     public function index()
     {
-        return view('oneToManyPoly');
+        return view('one_to_many_poly');
     }
 
     /**

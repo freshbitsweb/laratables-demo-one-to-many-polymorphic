@@ -11,7 +11,6 @@
                     <th>Liked By</th>
                 </tr>
             </thead>
-            <tbody></tbody>
         </table>
     </div>
 

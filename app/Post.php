@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+    */
     public $timestamps = false;
 
     /**
@@ -47,8 +52,9 @@ class Post extends Model
     */
     public static function laratablesSearchPostLiked($query, $searchValue)
     {
-        return $query->orWhereHas('likes', function($query) use($searchValue) {
+        return $query->orWhereHas('likes', function ($query) use ($searchValue) {
             $query->where('name', 'like', "%" .$searchValue. "%");
         });
+        return $query;
     }
 }
