@@ -14,7 +14,7 @@ class Video extends Model
     public $timestamps = false;
 
     /**
-     * Get all of the video's comments.
+     * Get all of the video's likes.
     */
     public function likes()
     {

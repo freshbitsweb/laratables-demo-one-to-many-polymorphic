@@ -14,7 +14,7 @@ class Post extends Model
     public $timestamps = false;
 
     /**
-     * Get all of the post's comments.
+     * Get all of the post's likes.
     */
     public function likes()
     {
@@ -22,7 +22,7 @@ class Post extends Model
     }
 
     /**
-     * Display the relationship data in custom column(postLiked).
+     * Display the relationship data in custom column(post_Liked).
      *
      * @param \App\Post
      * @return string
@@ -55,6 +55,5 @@ class Post extends Model
         return $query->orWhereHas('likes', function ($query) use ($searchValue) {
             $query->where('name', 'like', "%" .$searchValue. "%");
         });
-        return $query;
     }
 }
