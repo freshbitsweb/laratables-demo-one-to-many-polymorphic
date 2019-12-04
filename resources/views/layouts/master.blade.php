@@ -23,7 +23,7 @@
                 columns: [
                     { name: 'title' },
                     { name: 'url', searchable: false },
-                    { name: 'postLiked', orderable: false },
+                    { name: 'post_Liked', orderable: false },
                 ],
             });
         });
