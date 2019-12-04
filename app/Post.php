@@ -22,6 +22,17 @@ class Post extends Model
     }
 
     /**
+     * Eager load likes value of the post.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public static function laratablesQueryConditions($query)
+    {
+        return $query->with('likes');
+    }
+
+    /**
      * Display the relationship data in custom column(post_Liked).
      *
      * @param \App\Post
