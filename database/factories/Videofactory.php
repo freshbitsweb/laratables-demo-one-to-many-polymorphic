@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Video::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence($nbWords = 1, $variableNbWords = true),
-        'url' => $faker->url,
+        'image_url' => $faker->url,
     ];
 });
 
