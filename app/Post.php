@@ -10,12 +10,13 @@ class Post extends Model
      * Indicates if the model should be timestamped.
      *
      * @var bool
-    */
+     */
     public $timestamps = false;
 
     /**
      * Get all of the post's likes.
-    */
+     *
+     */
     public function likes()
     {
         return $this->morphMany('App\Like', 'likeable');
@@ -37,7 +38,7 @@ class Post extends Model
      *
      * @param \App\Post
      * @return string
-    */
+     */
     public static function laratablesCustomPostLiked($post)
     {
         return $post->likes->implode('name', ',');
@@ -48,19 +49,19 @@ class Post extends Model
      *
      * @param \App\Post
      * @return string
-    */
+     */
     public static function laratablesImageUrl($post)
     {
         return "<img src='$post->image_url'>";
     }
 
     /**
-     * searching the postLiked column data.
+     * searching the post_Liked column data.
      *
      * @param \Illuminate\Database\Eloquent\Builder
      * @param string search term
      * @return \Illuminate\Database\Eloquent\Builder
-    */
+     */
     public static function laratablesSearchPostLiked($query, $searchValue)
     {
         return $query->orWhereHas('likes', function ($query) use ($searchValue) {

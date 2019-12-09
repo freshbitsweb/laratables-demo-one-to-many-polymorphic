@@ -10,9 +10,8 @@ class OneToManyPolyController extends Controller
     /**
      *  Show Table Header column
      *
-     *
-      * @return Illuminate\Http\Response
-    **/
+     * @return Illuminate\Http\Response
+     **/
     public function index()
     {
         return view('one_to_many_poly');
@@ -21,9 +20,8 @@ class OneToManyPolyController extends Controller
     /**
      * return data of the One To Many Polymorphic Relationship datatables.
      *
-     *
      * @return Jason
-    **/
+     **/
     public function oneToManyPolyData()
     {
         return Laratables::recordsOf(Post::class);
