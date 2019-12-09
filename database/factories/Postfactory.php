@@ -6,11 +6,11 @@ use App\Post;
 use Faker\Generator as Faker;
 
 $urlArray = [
-    'https://via.placeholder.com/700x70/00abf0/000000',
-    'https://via.placeholder.com/700x70/00abf0/000000',
-    'https://via.placeholder.com/700x70/00abf0/000000',
-    'https://via.placeholder.com/700x70/00abf0/000000',
-    'https://via.placeholder.com/700x70/00abf0/000000'
+    'https://via.placeholder.com/550x70/00abf0/000000',
+    'https://via.placeholder.com/550x70/00abf0/000000',
+    'https://via.placeholder.com/550x70/00abf0/000000',
+    'https://via.placeholder.com/550x70/00abf0/000000',
+    'https://via.placeholder.com/550x70/00abf0/000000'
 ];
 
 $factory->define(Post::class, function (Faker $faker) use($urlArray) {
