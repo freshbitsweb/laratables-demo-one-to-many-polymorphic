@@ -18,7 +18,7 @@ class OneToManyPolyController extends Controller
     }
 
     /**
-     * return data of the One To Many Polymorphic Relationship datatables.
+     * Returns data of the One To Many Polymorphic Relationship datatables.
      *
      * @return Illuminate\Http\JsonResponse
      **/

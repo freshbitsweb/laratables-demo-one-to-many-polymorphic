@@ -10,7 +10,7 @@
 </head>
 <body>
 
-@yield('content')
+    @yield('content')
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
@@ -23,7 +23,7 @@
                 columns: [
                     { name: 'title' },
                     { name: 'image_url', searchable: false },
-                    { name: 'post_Liked', orderable: false },
+                    { name: 'post_liked', orderable: false },
                 ],
             });
         });

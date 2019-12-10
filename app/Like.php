@@ -12,13 +12,4 @@ class Like extends Model
      * @var bool
      */
     public $timestamps = false;
-
-    /**
-     * Get the owning likeable model.
-     *
-     */
-    public function likeable()
-    {
-        return $this->morphTo();
-    }
 }
